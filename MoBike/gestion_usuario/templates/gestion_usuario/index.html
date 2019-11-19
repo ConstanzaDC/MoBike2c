@@ -1,0 +1,179 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block head %}
+     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+ 
+     <link rel="stylesheet" href="{% static 'css/diseño_inicio.css' %}">
+     <link
+     rel="stylesheet"
+     href="https://fonts.googleapis.com/css?family=Montserrat"
+   />
+    <title>Sucursal Usuario</title>
+{% endblock head %}
+{% block content %}
+<body>
+    <div class="contenedor-general">
+      <h1>Bievenido/a a MoBike</h1>
+      <p>¡Descárgate la App para empezar a pedalear hoy!</p>
+      <!-- carrusel sacado de bootstrap hackers -->
+      <div class="carrusel">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <!-- la clase active dice que será la primera imagen en verse al ingresar a la página -->
+            <div class="carousel-item active">
+              <img
+                src="{% static 'img/bici1.png'%}"
+                class="d-block "
+                alt="Bici1"
+                style="margin: auto;"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="{% static 'img/bici2.png'%}"
+                class="d-block "
+                alt="Bici2"
+                style="margin: auto;"
+              />
+            </div>
+
+            <div class="carousel-item">
+                <img
+                  src="{% static 'img/gente1.png' %}"
+                  class="d-block "
+                  alt="Bici3"
+                  style="margin: auto;"
+                />
+              </div>
+                
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="contenedor-acerca">
+        <h1>Acerca de Mobike</h1>
+        <p>
+          Mobike es la más grande red de bicicletas compartidas. Con Mobike
+          puedes moverte fácilmente por la ciudad sin necesidad de quedarte
+          atascado en el tráfico, aparcar tu bicicleta en las estaciones más
+          alejadas, ¡o incluso tener una bicicleta!
+        </p>
+
+        <p>
+          Ya sea que vayas a trabajar o por diversión, Mobike está ahí para cada
+          ocasión. Cuando lo necesites, busca una estación Mobike cerca de ti,
+          desbloquea una bici y listo.
+        </p>
+
+        <p>
+          ¡Usar MoBike es muy fácil! Así es como funciona:
+        </p>
+
+        <p>
+          1. Abre la aplicación y encuentra la zona exclusiva Mobike más cercana
+          en el mapa.
+        </p>
+
+        <p>
+          2. Selecciona la zona exclusiva Mobike para encontrar cómo llegar a
+          ella, o incluso reservar una bicicleta durante 15 minutos antes de
+          utilizarla.
+        </p>
+
+        <p>
+          3. Cuando encuentres tu Mobike, desbloquéala escaneando el código QR
+          encima del candado de la rueda trasera, o el código QR en el medio del
+          manillar.
+        </p>
+        <p>
+          4. Una vez desbloqueada. ¡Disfruta de tu viaje sobre dos ruedas hasta
+          tu zona exclusiva de destino!
+        </p>
+        <p>
+          5. Una vez acabes tu viaje, indica tu RUT en el Tòtem MoBike, y
+          estaciona la bicicleta en el bloque que se te indicará en pantalla.
+        </p>
+        <p>
+          6. Bloquea la bicicleta deslizando el candado en la aplicación y obtén
+          los detalles de tu viaje que aparecerán inmediatamente en tu
+          aplicación.
+        </p>
+        <p>
+          7. ¡Disfruta del resto del día sabiendo que has contribuido a mejorar
+          tu ciudad y ahorrar dinero, al mismo tiempo!
+        </p>
+      </div>
+      <!-- se usa id para linkearlo desde navbar -->
+      <div id="contenedor-quienes-somos">
+        <h1 class="titulo-quienes-somos">¿Quiénes somos?</h1>
+        <div class="cont-imagenes-quienes-somos">
+          <img src="{% static 'img/allan.png' %}" alt="Allan Collao" />
+          <img src="{% static 'img/mujer.png' %}" alt="Constanza Díaz" />
+          <img src="{% static 'img/pablo.png' %}" alt="Pablo Durán" />
+        </div>
+        <div class="cont-nombres-quienes-somos">
+          <h3>Allan Collao</h3>
+          <h3>Constanza Díaz</h3>
+          <h3>Pablo Durán</h3>
+        </div>
+
+        <p>
+          Somos un equipo de estudiantes de DuocUC. Cursamos la carrera de
+          Analista programador computacional, en cuarto semestre. Hemos recibido
+          el encargo de realizar una página web para el ramo de Desarrollo Web,
+          por lo que optamos por desarrollar el proyecto MoBike.
+        </p>
+        <p></p>
+      </div>
+      <div class="contenedor-footer">
+        <footer>
+          <div class="googleplay">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.mobike.mobikeapp&hl=es_CL"
+              ><img src="{% static 'img/googleplay.png' %}" alt="Disponible en GooglePlay"
+            /></a>
+          </div>
+          <div class="appstore">
+            <a
+              href="https://apps.apple.com/es/app/mobike-smart-bike-sharing/id1044535426"
+              ><img src="{% static 'img/appstore.png' %}" alt="Disponible en AppStore"
+            /></a>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+
+    
+{% endblock content %}
